@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 // Define your work hours
-const workHoursPerDay = 8; //TODO this must be dynamic
+const workHoursPerDay = 7; //TODO this must be dynamic
 
 // Get the current worked time from the website
 const workedTimeString = document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-lg-12.order-lg-1.order-xl-1 > div:nth-child(3) > div > div.kt-ribbon__target > i > span").innerText;
@@ -46,12 +46,12 @@ leaveTimeBox.style.borderRadius = '5px';
 leaveTimeBox.style.padding = '10px';
 leaveTimeBox.style.marginTop = '20px';
 
-leaveTimeBox.innerHTML = `
-  <div style="font-weight: bold;">Leave Time:</div>
-  <div>${leaveHours}:${leaveMinutes}:${leaveSeconds}</div>
-`;
-
+if (leaveTime > now.getTime()) {
 // Append the leave time box to the body of the page
 document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-lg-12.order-lg-1.order-xl-1 > div:nth-child(3) > div > h5").innerText=`YOU MUST LEAVE AT ${leaveHours}:${leaveMinutes}:${leaveSeconds} `;
+} else {
+// Append the leave time box to the body of the page
+document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-lg-12.order-lg-1.order-xl-1 > div:nth-child(3) > div > h5").innerText=` WHAT ARE YOU DOING HERE `;
+}
 
 })();
