@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  I want to go home!
 // @author       You
-// @match        https://*/*
+// @match        https://intranet.proxym-group.net/home/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 // Define your work hours
-const workHoursPerDay = 7; //TODO this must be dynamic
+const workHoursPerDay = 8; //TODO this must be dynamic
 
 // Get the current worked time from the website
 const workedTimeString = document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-lg-12.order-lg-1.order-xl-1 > div:nth-child(3) > div > div.kt-ribbon__target > i > span").innerText;
@@ -53,5 +53,6 @@ document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-
 // Append the leave time box to the body of the page
 document.querySelector("#kt_content > div > div:nth-child(5) > div.col-xl-9.col-lg-12.order-lg-1.order-xl-1 > div:nth-child(3) > div > h5").innerText=` WHAT ARE YOU DOING HERE `;
 }
+
 
 })();
