@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  I want to go home!
 // @author       You
-// @match        https://intranet.proxym-group.net/home/
+// @match        https://*/*/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
